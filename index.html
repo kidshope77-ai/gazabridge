@@ -48,7 +48,7 @@
         .card p { font-size: 14px; color: #475569; margin-bottom: 24px; flex: 1; }
         
         .progress-bar-bg { width: 100%; background: #f1f5f9; height: 10px; border-radius: 9999px; overflow: hidden; margin-bottom: 10px; }
-        .progress-bar-fill { background: #15803d; height: 100%; border-radius: 9999px; width: 92%; }
+        .progress-bar-fill { background: #15803d; height: 100%; border-radius: 9999px; }
         .progress-text { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: #64748b; }
         .progress-text .green-text { color: #15803d; }
         
@@ -77,7 +77,7 @@
         <section class="hero">
             <div class="badge">100% Direct Human-to-Human Solidarity</div>
             <h1>Jede Familie hat eine Geschichte. <br><span class="text-green">Jede Initiative verdient es, gesehen zu werden.</span></h1>
-            <p>Willkommen bei GazaDirect! Wir verbinden Sie direkt mit verifizierten Initiativen vor Ort und Familien in Gaza. <strong>0% Plattformgebühren</strong> – Spenden gehen direkt an die Betroffenen.</p>
+            <p>Willkommen bei GazaDirect! Wir verbinden Sie direkt mit verifizierten Initiativen vor Ort und Familien in Gaza. <strong>0% Plattformgebühren</strong> – Spenden gehen direkt an بهر Betroffenen.</p>
             <a href="#families" class="btn">Familien ansehen ↓</a>
         </section>
     </div>
@@ -86,7 +86,7 @@
         <section class="stats-grid">
             <div class="stat-card">
                 <div class="stat-label">Total Geliefert</div>
-                <div class="stat-value">$210,727</div>
+                <div class="stat-value">\$210,727</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">Aktive Familien</div>
@@ -104,30 +104,50 @@
 
         <section id="families">
             <h2 class="section-title"><span>🍉</span> <span>Verifizierte Initiativen & Familien</span></h2>
-            <div class="cards-grid">
-                
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-badge">Bildungsinitiative</div>
-                        <h3>Kids4Hope – Bildung im Zelt</h3>
-                        <p>Wiederaufbau von Bildungszelten und tägliches Schulfrühstück für 60 Kinder im Norden Gazas, um dem systematischen Bildungsentzug entgegenzuwirken.</p>
-                        <div class="progress-bar-bg">
-                            <div class="progress-bar-fill"></div>
-                        </div>
-                        <div class="progress-text">
-                            <span class="green-text">92% Finanziert</span>
-                            <span>Nur $481 benötigt</span>
-                        </div>
-                    </div>
-                    <div class="card-footer">
-                        <a href="https://libr8aid.com" target="_blank" class="card-btn">Direkt Unterstützen →</a>
-                    </div>
-                </div>
-
+            <div id="campaigns-container" class="cards-grid">
+                <!-- Cards will render here dynamically via JavaScript -->
             </div>
         </section>
     </div>
 
+    <script>
+        document.addEventListener("DOMContentLoaded", function() {
+            fetch('data.json')
+                .then(response => response.json())
+                .then(data => {
+                    const container = document.getElementById('campaigns-container');
+                    
+                    /* Shuffling algorithm to randomize display order */
+                    const shuffled = data.sort(() => 0.5 - Math.random());
+                    
+                    shuffled.forEach(item => {
+                        const card = document.createElement('div');
+                        card.className = 'card';
+                        card.innerHTML = `
+                            <div class="card-body">
+                                <div class="card-badge">${item.category}</div>
+                                <h3>${item.title}</h3>
+                                <p>${item.description}</p>
+                                <div class="progress-bar-bg">
+                                    <div class="progress-bar-fill" style="width: ${item.percentage}%"></div>
+                                </div>
+                                <div class="progress-text">
+                                    <span class="green-text">${item.percentage}% Finanziert</span>
+                                    <span>${item.needed_text}</span>
+                                </div>
+                            </div>
+                            <div class="card-footer">
+                                <a href="${item.link}" target="_blank" class="card-btn">Direkt Unterstützen →</a>
+                            </div>
+                        `;
+                        container.appendChild(card);
+                    });
+                })
+                .catch(error => console.error('Error loading data:', error));
+        });
+    </script>
+
 </body>
 </html>
+
 
