@@ -1,0 +1,20 @@
+[
+  {
+    "id": 1,
+    "category": "Bildungsinitiative",
+    "title": "Kids4Hope – Bildung im Zelt",
+    "description": "Wiederaufbau von Bildungszelten und taegliches Schulfruehstueck fuer 60 Kinder im Norden Gazas, um dem systematischen Bildungsentzug entgegenzuwirken.",
+    "percentage": 92,
+    "needed_text": "Nur $481 benoetigt",
+    "link": "https://libr8aid.com"
+  },
+  {
+    "id": 2,
+    "category": "Wasserversorgung",
+    "title": "Sauberes Trinkwasser fuer das Camp",
+    "description": "Finanzierung von mobilen Wassertrucks, um ueber 70 gefluechtete Familien taeglich mit lebenswichtigem, sauberem Trinkwasser zu versorgen.",
+    "percentage": 65,
+    "needed_text": "Nur $1,200 benoetigt",
+    "link": "https://libr8aid.com"
+  }
+]
