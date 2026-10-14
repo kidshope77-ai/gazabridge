@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GazaBridge.org | Solidarität & Direkthilfe</title>
+    <!-- استدعاء إطار عمل Tailwind CSS السريع للخلفية والتصميم الكريمي الدافئ -->
+    <script src="https://tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'cream': '#F9F6F0',
+                        'gaza-green': '#15803d',
+                        'gaza-red': '#b91c1c',
+                        'gaza-black': '#0f172a',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-gaza-black font-sans">
+
+    <!-- شريط التنقل العلوي (Navbar) -->
+    <nav class="bg-white border-b border-slate-200 py-4 px-6 sticky top-0 z-50 shadow-sm">
+        <div class="max-w-7xl mx-auto flex flex-wrap justify-between items-center">
+            <div class="flex items-center gap-3">
+                <!-- شعار المنصة المطور المصمت بالألوان الرسمية -->
+                <div class="text-2xl font-bold tracking-tight text-gaza-black flex items-center gap-1">
+                    <span class="text-gaza-red">Gaza</span><span>Bridge</span><span class="text-gaza-green">.org</span>
+                </div>
+            </div>
+            <div class="flex gap-4 text-sm font-medium text-slate-600">
+                <a href="#families" class="hover:text-gaza-green transition-colors">Familien</a>
+                <a href="#pledge" class="hover:text-gaza-green transition-colors">Verification Pledge</a>
+                <a href="#faq" class="hover:text-gaza-green transition-colors">FAQ</a>
+                <a href="#mission" class="hover:text-gaza-green transition-colors">Mission</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- الواجهة الترحيبية الرئيسية (Hero Section) -->
+    <section class="text-center py-16 px-4 max-w-4xl mx-auto">
+        <div class="inline-flex items-center gap-2 bg-emerald-100 text-emerald-800 text-xs font-semibold px-3 py-1 rounded-full mb-6">
+            <span class="flex h-2 w-2 rounded-full bg-emerald-500 animate-pulse"></span>
+            100% Direct Human-to-Human Solidarity
+        </div>
+        <h1 class="text-4xl md:text-5xl font-bold tracking-tight mb-4">
+            Jede Familie hat eine Geschichte. <br>
+            <span class="text-gaza-green">Jede Initiative verdient es, gesehen zu werden.</span>
+        </h1>
+        <p class="text-lg text-slate-600 max-w-2xl mx-auto mb-8 leading-relaxed">
+            Willkommen bei GazaBridge! Wir verbinden Sie direkt mit verifizierten Initiativen vor Ort und Familien in Gaza. <strong>0% Plattformgebühren</strong> – Spenden gehen direkt an die Betroffenen.
+        </p>
+        <div class="flex justify-center gap-4">
+            <a href="#families" class="bg-gaza-green hover:bg-emerald-700 text-white font-medium px-6 py-3 rounded-lg shadow-sm transition-all">
+                Familien ansehen ↓
+            </a>
+        </div>
+    </section>
+
+    <!-- المؤشرات المالية العامة للمنصة -->
+    <section class="max-w-6xl mx-auto px-4 mb-12 grid grid-cols-2 md:grid-cols-4 gap-4 text-center">
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="text-xs font-medium text-slate-500 uppercase">Total Geliefert</div>
+            <div class="text-2xl font-bold text-gaza-black mt-1">$210,727</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="text-xs font-medium text-slate-500 uppercase">Aktive Familien</div>
+            <div class="text-2xl font-bold text-gaza-black mt-1">42 Aktive</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="text-xs font-medium text-slate-500 uppercase">Plattformgebühr</div>
+            <div class="text-2xl font-bold text-gaza-green mt-1">0% Taken</div>
+        </div>
+        <div class="bg-white p-6 rounded-xl border border-slate-200 shadow-sm">
+            <div class="text-xs font-medium text-slate-500 uppercase">QR-Unterstützer</div>
+            <div class="text-2xl font-bold text-gaza-black mt-1">25+ Aktiv</div>
+        </div>
+    </section>
+
+    <!-- قسم عرض بطاقات المبادرات (Campaign Cards) -->
+    <section id="families" class="max-w-6xl mx-auto px-4 py-8">
+        <h2 class="text-2xl font-bold mb-6 flex items-center gap-2">
+            <span>🍉</span> Verifizierte Initiativen & Familien
+        </h2>
+        
+        <!-- شبكة عرض البطاقات -->
+        <div class="grid md:grid-cols-2 gap-6">
+            <!-- بطاقة نموذجية لحملة كيدز فور هوب والتعليم الميداني -->
+            <div class="bg-white border border-slate-200 rounded-2xl overflow-hidden shadow-sm flex flex-col">
+                <div class="p-6 flex-1">
+                    <span class="bg-amber-100 text-amber-800 text-xs font-semibold px-2.5 py-1 rounded-md">Bildungsinitiative</span>
+                    <h3 class="text-xl font-bold mt-3 mb-2 text-gaza-black">Kids4Hope – Bildung im Zelt</h3>
+                    <p class="text-sm text-slate-600 mb-4">
+                        Wiederaufbau von Bildungszelten und tägliches Schulfrühstück für 60 Kinder im Norden Gazas, um dem systematischen Bildungsentzug entgegenzuwirken.
+                    </p>
+                    <!-- شريط تقدم التبرع الذكي المحدث -->
+                    <div class="w-full bg-slate-100 h-3 rounded-full overflow-hidden mb-2">
+                        <div class="bg-gaza-green h-full rounded-full" style="width: 92%"></div>
+                    </div>
+                    <div class="flex justify-between text-xs font-medium text-slate-500">
+                        <span>92% Finanziert</span>
+                        <span>Nur $481 benötigt</span>
+                    </div>
+                </div>
+                <div class="bg-slate-50 p-4 border-t border-slate-100">
+                    <a href="https://libr8aid.com" target="_blank" class="block text-center bg-gaza-green hover:bg-emerald-700 text-white font-medium py-2 rounded-lg transition-colors text-sm">
+                        Direkt Unterstützen →
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+</body>
+</html>
