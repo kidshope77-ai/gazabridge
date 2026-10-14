@@ -37,7 +37,7 @@
 
         .section-title { font-size: 26px; font-weight: 800; margin-bottom: 28px; color: #0f172a; display: flex; align-items: center; gap: 8px; }
         
-        .cards-grid { display: grid; grid-template-cols: 1fr; gap: 24px; margin-bottom: 40px; }
+        .cards-grid { display: grid; grid-template-cols: 1fr; gap: 24px; margin-bottom: 48px; }
         @media (min-width: 768px) { .cards-grid { grid-template-cols: repeat(2, 1fr); } }
         
         .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: transform 0.2s, box-shadow 0.2s; }
@@ -55,6 +55,13 @@
         .card-footer { background: #f8fafc; padding: 20px 28px; border-top: 1px solid #f1f5f9; }
         .card-btn { display: block; text-align: center; background: #15803d; color: #ffffff; font-weight: 600; padding: 12px; border-radius: 12px; text-decoration: none; font-size: 14px; transition: background 0.2s; box-shadow: 0 2px 4px rgba(21,128,61,0.1); }
         .card-btn:hover { background: #166534; }
+
+        .info-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; margin-bottom: 48px; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+        .info-box h2 { font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 16px; display: flex; align-items: center; gap: 8px; }
+        .info-box p { font-size: 15px; color: #475569; margin-bottom: 16px; line-height: 1.7; }
+        .info-box ul { margin-left: 20px; color: #475569; font-size: 15px; margin-bottom: 16px; }
+        .info-box li { margin-bottom: 10px; line-height: 1.6; }
+        .info-box strong { color: #0f172a; }
     </style>
 </head>
 <body>
@@ -77,7 +84,7 @@
         <section class="hero">
             <div class="badge">100% Direct Human-to-Human Solidarity</div>
             <h1>Jede Familie hat eine Geschichte. <br><span class="text-green">Jede Initiative verdient es, gesehen zu werden.</span></h1>
-            <p>Willkommen bei GazaDirect! Wir verbinden Sie direkt mit verifizierten Initiativen vor Ort und Familien in Gaza. <strong>0% Plattformgebühren</strong> – Spenden gehen direkt an بهر Betroffenen.</p>
+            <p>Willkommen bei GazaDirect! Wir verbinden Sie direkt mit verifizierten Initiativen vor Ort und Familien in Gaza. <strong>0% Plattformgebühren</strong> – Spenden gehen direkt an die Betroffenen.</p>
             <a href="#families" class="btn">Familien ansehen ↓</a>
         </section>
     </div>
@@ -86,7 +93,7 @@
         <section class="stats-grid">
             <div class="stat-card">
                 <div class="stat-label">Total Geliefert</div>
-                <div class="stat-value">\$210,727</div>
+                <div class="stat-value">$210,727</div>
             </div>
             <div class="stat-card">
                 <div class="stat-label">Aktive Familien</div>
@@ -104,50 +111,24 @@
 
         <section id="families">
             <h2 class="section-title"><span>🍉</span> <span>Verifizierte Initiativen & Familien</span></h2>
-            <div id="campaigns-container" class="cards-grid">
-                <!-- Cards will render here dynamically via JavaScript -->
-            </div>
+            <div id="campaigns-container" class="cards-grid"></div>
         </section>
-    </div>
 
-    <script>
-        document.addEventListener("DOMContentLoaded", function() {
-            fetch('data.json')
-                .then(response => response.json())
-                .then(data => {
-                    const container = document.getElementById('campaigns-container');
-                    
-                    /* Shuffling algorithm to randomize display order */
-                    const shuffled = data.sort(() => 0.5 - Math.random());
-                    
-                    shuffled.forEach(item => {
-                        const card = document.createElement('div');
-                        card.className = 'card';
-                        card.innerHTML = `
-                            <div class="card-body">
-                                <div class="card-badge">${item.category}</div>
-                                <h3>${item.title}</h3>
-                                <p>${item.description}</p>
-                                <div class="progress-bar-bg">
-                                    <div class="progress-bar-fill" style="width: ${item.percentage}%"></div>
-                                </div>
-                                <div class="progress-text">
-                                    <span class="green-text">${item.percentage}% Finanziert</span>
-                                    <span>${item.needed_text}</span>
-                                </div>
-                            </div>
-                            <div class="card-footer">
-                                <a href="${item.link}" target="_blank" class="card-btn">Direkt Unterstützen →</a>
-                            </div>
-                        `;
-                        container.appendChild(card);
-                    });
-                })
-                .catch(error => console.error('Error loading data:', error));
-        });
-    </script>
+        <section id="pledge" class="info-box">
+            <h2><span>🛡️</span> Unser Verifizierungs-Versprechen (Verification Pledge)</h2>
+            <p>Vertrauen und absolute Transparenz sind das Fundament von <strong>GazaDirect.org</strong>. Um sicherzustellen, dass jede Spende ohne Umwege und rechtmaessig ankommt, durchlaeuft jede auf dieser Plattform gelistete Initiative und Familie einen strengen, mehrstufigen Pruefprozess vor Ort:</p>
+            <ul>
+                <li><strong>Identitaetspruefung im Feld:</strong> Jede Kampagne wird von unseren vertrauenswuerdigen Helfern direkt vor Ort in den Camps physisch ueberprueft. Wir verifizieren offizielle Ausweisdokumente und Geburtsdaten.</li>
+                <li><strong>Direkte Finanzwege ohne Abzuege:</strong> Wir stellen sicher, dass die Spendenseiten (wie GoFundMe oder Chuffed) direkt mit den Bankkonten der rechtmaessigen Kampagnenorganisatoren oder deren engen Verwandten verknuepft sind.</li>
+                <li><strong>Regelmaessige Video-Updates:</strong> Alle Initiativen sind verpflichtet, regelmaessige visuelle Nachweise (Fotos und Videos mit Datumsangabe) ueber die Verwendung der Gelder und die Fortschritte im Feld einzureichen.</li>
+                <li><strong>Schutz vor Missbrauch:</strong> Wir protokollieren die urspruenglichen finanziellen Ziele. Unbegruendete Erhoehungen von Spendenzielen werden blockiert, um die Fairness fuer alle gelisteten Familien zu bewahren.</li>
+            </ul>
+            <p>GazaDirect.org verdient keinen Cent an diesen Kampagnen. Unser Versprechen an Sie lautet: <strong>100% direkte Solidarität von Mensch zu Mensch.</strong></p>
+        </section>
 
-</body>
-</html>
+        <section id="mission" class="info-box">
+            <h2><span>🕊️</span> Unsere Mission (Mission Statement)</h2>
+            <p>Mitten in der Krise und den schwersten Zerstoerungen im Gazastreifen ist <strong>GazaDirect.org</strong> entstanden, um eine direkte und transparente Bruecke der Solidaritaet zu bauen. Unsere Mission ist es, den betroffenen Familien und unabhaengigen Graswurzel-Initiativen eine globale Stimme und Plattform zu geben, die ihnen sonst verwehrt bleibt.</p>
+
 
 
