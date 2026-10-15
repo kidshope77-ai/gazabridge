@@ -1,3 +1,12 @@
 [
-  
+  {
+    "id": 1,
+    "category": "Bildungsinitiative",
+    "title": "Kids4Hope – Bildung & Nahrung fuer Waisenkinder",
+    "description": "Unterstuetzung fuer kriegsbetroffene Waisenkinder im Norden Gazas durch den Aufbau von sicheren Bildungszelten sowie die Sicherung einer taeglichen, nahrhaften Mahlzeit gegen den Hunger.",
+    "percentage": 58,
+    "needed_text": "Bereits 1,744 EUR gesammelt",
+    "link": "https://gogetfunding.com/Kids4Hope/"
+  }
 ]
+
