@@ -1,36 +1,64 @@
-<!DOCTYPE html>
-<html lang="de">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GazaDirect.org | Solidarität & Direkthilfe</title>
-    <style>
-        * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif; }
-        body { background-color: #F9F6F0; color: #0f172a; line-height: 1.6; padding-bottom: 80px; }
-        .max-w-1152 { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
-        .max-w-896 { max-width: 896px; margin: 0 auto; padding: 0 16px; }
-        nav { background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 16px 24px; position: sticky; top: 0; z-index: 50; }
-        .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1152px; margin: 0 auto; }
-        .logo { font-size: 24px; font-weight: bold; }
-        .logo-red { color: #b91c1c; } .logo-green { color: #15803d; }
-        .hero { text-align: center; padding: 60px 24px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; margin: 32px auto; }
-        .btn { display: inline-block; background: #15803d; color: #ffffff; font-weight: 600; padding: 14px 36px; border-radius: 12px; text-decoration: none; }
-    </style>
-</head>
-<body>
-    <nav>
-        <div class="nav-container">
-            <div class="logo"><span class="logo-red">Gaza</span><span>Direct</span><span class="logo-green">.org</span></div>
-        </div>
-    </nav>
-    <div class="max-w-896">
-        <section class="hero">
-            <h1>GazaDirect.org Solidarität</h1>
-            <p>0% Plattformgebühren – Spenden gehen direkt an die Betroffenen.</p>
+    <!-- STATS AND CAMPAIGN CARDS START -->
+    <div class="max-w-1152" style="max-width: 1152px; margin: 0 auto; padding: 0 16px;">
+        <section style="display: grid; grid-template-cols: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin: 32px 0 48px 0; text-align: center;">
+            <div style="background: #ffffff; padding: 20px; border-radius: 16px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Total Geliefert</div>
+                <div style="font-size: 24px; font-weight: 800; color: #0f172a; margin-top: 6px;">$210,727</div>
+            </div>
+            <div style="background: #ffffff; padding: 20px; border-radius: 16px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Aktive Familien</div>
+                <div style="font-size: 24px; font-weight: 800; color: #0f172a; margin-top: 6px;">1 Aktiv</div>
+            </div>
+            <div style="background: #ffffff; padding: 20px; border-radius: 16px; border: 1px solid #e2e8f0;">
+                <div style="font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase;">Plattformgebühr</div>
+                <div style="font-size: 24px; font-weight: 800; color: #15803d; margin-top: 6px;">0% Taken</div>
+            </div>
+        </section>
+
+        <section id="families" style="margin-bottom: 48px;">
+            <h2 style="font-size: 24px; font-weight: 800; margin-bottom: 24px;">🍉 Verifizierte Initiativen</h2>
+            <div style="display: grid; grid-template-cols: repeat(auto-fit, minmax(300px, 1fr)); gap: 24px;">
+                <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column;">
+                    <div style="padding: 24px; flex: 1;">
+                        <span style="background: #fef3c7; color: #92400e; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; text-transform: uppercase;">Bildungsinitiative</span>
+                        <h3 style="font-size: 20px; font-weight: 700; color: #0f172a; margin: 12px 0 8px 0;">Kids4Hope – Bildung & Nahrung</h3>
+                        <p style="font-size: 14px; color: #475569; margin-bottom: 20px;">Unterstuetzung fuer kriegsbetroffene Waisenkinder im Norden Gazas durch den Aufbau von Bildungszelten und ein taegliches Schulfruehstueck.</p>
+                        <div style="width: 100%; background: #f1f5f9; height: 10px; border-radius: 9999px; overflow: hidden; margin-bottom: 8px;">
+                            <div style="background: #15803d; height: 100%; width: 58%;"></div>
+                        </div>
+                        <div style="display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: #64748b;">
+                            <span style="color: #15803d;">58% Finanziert</span>
+                            <span>Bereits 1,744 EUR gesammelt</span>
+                        </div>
+                    </div>
+                    <div style="background: #f8fafc; padding: 16px 24px; border-top: 1px solid #f1f5f9;">
+                        <a href="https://gogetfunding.com/Kids4Hope/" target="_blank" style="display: block; text-align: center; background: #15803d; color: #ffffff; font-weight: 600; padding: 12px; border-radius: 12px; text-decoration: none; font-size: 14px;">Direkt Unterstützen →</a>
+                    </div>
+                </div>
+            </div>
         </section>
     </div>
-</body>
-</html>
+    <!-- SECTIONS AND FAQ START -->
+    <div class="max-w-896" style="max-width: 896px; margin: 0 auto; padding: 0 16px;">
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; margin-bottom: 32px;">
+            <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 16px;">🛡️ Verification Pledge</h2>
+            <p style="font-size: 14px; color: #475569;">Jede Initiative wird physisch vor Ort verifiziert. Wir kontrollieren Dokumente und sichern direkte Finanzwege ohne Abzuege, um absolute Transparenz zu garantieren.</p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; margin-bottom: 32px;">
+            <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 16px;">❓ Häufig gestellte Fragen (FAQ)</h2>
+            <p style="font-size: 14px; color: #475569; font-weight: bold; margin-bottom: 4px;">● Behaelt die Plattform Gebuehren ein?</p>
+            <p style="font-size: 14px; color: #475569; margin-bottom: 16px;">Nein. Unsere Plattform nimmt 0% Provision. Spenden gehen zu 100% direkt an die betroffenen Original-Kampagnen.</p>
+            <p style="font-size: 14px; color: #475569; font-weight: bold; margin-bottom: 4px;">● Wie kommen die Gelder an?</p>
+            <p style="font-size: 14px; color: #475569;">Die Auszahlungen erfolgen auf verifizierte Konten von nahen Angehoerigen im Ausland (z.B. Tuerkei) und werden per registrierten Bargeld-Zustellungsnetzwerken direkt ins Feld uebermittelt.</p>
+        </div>
+
+        <div style="background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; margin-bottom: 32px;">
+            <h2 style="font-size: 22px; font-weight: 800; margin-bottom: 16px;">🕊️ Unsere Mission</h2>
+            <p style="font-size: 14px; color: #475569;">Wir glauben fest daran, dass Bildung ein Akt des Widerstands gegen den Analphabetismus ist. GazaDirect.org ist zu 100% gemeinnuetzig und frei von Profitgedanken.</p>
+        </div>
+    </div>
+
 
 
 
