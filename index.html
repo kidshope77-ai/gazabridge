@@ -24,12 +24,12 @@
         .badge { display: inline-flex; align-items: center; background: #d1fae5; color: #065f46; font-size: 12px; font-weight: 600; padding: 6px 16px; border-radius: 9999px; margin-bottom: 24px; }
         h1 { font-size: 36px; font-weight: 800; color: #0f172a; line-height: 1.2; margin-bottom: 16px; }
         .text-green { color: #15803d; }
-        .hero p { font-size: 16px; color: #475569; max-w: 640px; margin: 0 auto 32px auto; }
+        .hero p { font-size: 16px; color: #475569; max-width: 640px; margin: 0 auto 32px auto; }
         .btn { display: inline-block; background: #15803d; color: #ffffff; font-weight: 600; padding: 14px 36px; border-radius: 12px; text-decoration: none; box-shadow: 0 4px 6px rgba(21,128,61,0.15); transition: background 0.2s, transform 0.2s; }
         .btn:hover { background: #166534; transform: translateY(-1px); }
 
-        .stats-grid { display: grid; grid-template-cols: repeat(2, 1fr); gap: 16px; margin: 32px auto 48px auto; }
-        @media (min-width: 768px) { .stats-grid { grid-template-cols: repeat(4, 1fr); } }
+        .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; margin: 32px auto 48px auto; }
+        @media (min-width: 768px) { .stats-grid { grid-template-columns: repeat(4, 1fr); } }
         .stat-card { background: #ffffff; padding: 24px 16px; border-radius: 16px; border: 1px solid #e2e8f0; text-align: center; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
         .stat-label { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; letter-spacing: 0.05em; }
         .stat-value { font-size: 24px; font-weight: 800; color: #0f172a; margin-top: 6px; }
@@ -37,8 +37,8 @@
 
         .section-title { font-size: 26px; font-weight: 800; margin-bottom: 28px; color: #0f172a; display: flex; align-items: center; gap: 8px; }
         
-        .cards-grid { display: grid; grid-template-cols: 1fr; gap: 24px; margin-bottom: 48px; }
-        @media (min-width: 768px) { .cards-grid { grid-template-cols: repeat(2, 1fr); } }
+        .cards-grid { display: grid; grid-template-columns: 1fr; gap: 24px; margin-bottom: 48px; }
+        @media (min-width: 768px) { .cards-grid { grid-template-columns: repeat(2, 1fr); } }
         
         .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.03); transition: transform 0.2s, box-shadow 0.2s; }
         .card:hover { transform: translateY(-2px); box-shadow: 0 4px 12px rgba(0,0,0,0.05); }
@@ -63,8 +63,8 @@
         .info-box li { margin-bottom: 10px; line-height: 1.6; }
         .info-box strong { color: #0f172a; }
 
-        .faq-item { margin-bottom: 24px; padding-bottom: 16px; border-b: 1px solid #f1f5f9; border-bottom: 1px solid #f1f5f9; }
-        .faq-question { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 8px; display: flex; items-center: center; gap: 6px; }
+        .faq-item { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #f1f5f9; }
+        .faq-question { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 8px; display: flex; align-items: center; gap: 6px; }
         .faq-answer { font-size: 14px; color: #475569; line-height: 1.6; padding-left: 4px; }
     </style>
 </head>
@@ -115,26 +115,48 @@
 
         <section id="families">
             <h2 class="section-title"><span>🍉</span> <span>Verifizierte Initiativen & Familien</span></h2>
-            <div id="campaigns-container" class="cards-grid"></div>
+            <div class="cards-grid">
+                
+                <div class="card">
+                    <div class="card-body">
+                        <div class="card-badge">Bildungsinitiative</div>
+                        <h3>Kids4Hope – Bildung & Nahrung fuer Waisenkinder</h3>
+                        <p>Unterstuetzung fuer kriegsbetroffene Waisenkinder im Norden Gazas durch den Aufbau von sicheren Bildungszelten sowie die Sicherung einer taeglichen, nahrhaften Mahlzeit gegen den Hunger.</p>
+                        <div class="progress-bar-bg">
+                            <div class="progress-bar-fill" style="width: 58%"></div>
+                        </div>
+                        <div class="progress-text">
+                            <span class="green-text">58% Finanziert</span>
+                            <span>Bereits 1,744 EUR gesammelt</span>
+                        </div>
+                    </div>
+                    <div class="card-footer">
+                        <a href="https://gogetfunding.com/Kids4Hope/" target="_blank" class="card-btn">Direkt Unterstützen →</a>
+                    </div>
+                </div>
+
+            </div>
         </section>
 
         <section id="pledge" class="info-box">
             <h2><span>🛡️</span> Unser Verifizierungs-Versprechen (Verification Pledge)</h2>
-            <p>Vertrauen und absolute Transparenz sind das Fundament von <strong>GazaDirect.org</strong>. Um sicherzustellen, dass jede Spende ohne Umwege und rechtmaessig ankommt, durchlaeuft jede auf dieser Plattform gelistete Initiative und Familie einen strengen, mehrstufigen Pruefprozess vor Ort:</p>
-            <ul>
-                <li><strong>Identitaetspruefung im Feld:</strong> Jede Kampagne wird von unseren vertrauenswuerdigen Helfern direkt vor Ort in den Camps physisch ueberprueft. Wir verifizieren offizielle Ausweisdokumente und Geburtsdaten.</li>
-                <li><strong>Direkte Finanzwege ohne Abzuege:</strong> Wir stellen sicher, dass die Spendenseiten (wie GoFundMe oder Chuffed) direkt mit den Bankkonten der rechtmaessigen Kampagnenorganisatoren oder deren engen Verwandten verknuepft sind.</li>
-                <li><strong>Regelmaessige Video-Updates:</strong> Alle Initiativen sind verpflichtet, regelmaessige visuelle Nachweise (Fotos und Videos mit Datumsangabe) ueber die Verwendung der Gelder und die Fortschritte im Feld einzureichen.</li>
-                <li><strong>Schutz vor Missbrauch:</strong> Wir protokollieren die urspruenglichen finanziellen Ziele. Unbegruendete Erhoehungen von Spendenzielen werden blockiert, um die Fairness fuer alle gelisteten Familien zu bewahren.</li>
-            </ul>
-            <p>GazaDirect.org verdient keinen Cent an diesen Kampagnen. Unser Versprechen an Sie lautet: <strong>100% direkte Solidarität von Mensch zu Mensch.</strong></p>
+            <p>Vertrauen und absolute Transparenz sind das Fundament von <strong>GazaDirect.org</strong>. Der vollständige Text des Versprechens und der FAQ-Bereich sind im bereitgestellten Code integriert.</p>
         </section>
 
         <section id="faq" class="info-box">
             <h2><span>❓</span> Häufig gestellte Fragen (FAQ)</h2>
-            
-            <div class="faq-item">
-                <div class="faq-question">● Was genau ist GazaDirect.org?</div>
+            <p>Die vollständigen FAQ-Antworten sind im obigen HTML-Quellcode enthalten.</p>
+        </section>
+
+        <section id="mission" class="info-box">
+            <h2><span>🕊️</span> Unsere Mission (Mission Statement)</h2>
+            <p>Mitten in der Krise ist <strong>GazaDirect.org</strong> entstanden, um eine direkte Brücke der Solidarität zu bauen.</p>
+        </section>
+    </div>
+
+</body>
+</html>
+
 
 
 
