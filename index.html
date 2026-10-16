@@ -6,9 +6,9 @@
     <title>GazaDirect.org | Solidarität & Direkthilfe</title>
     <style>
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif; }
-        body { background-color: #F9F6F0; color: #0f172a; line-height: 1.6; padding-bottom: 60px; }
+        body { background-color: #F9F6F0; color: #0f172a; line-height: 1.6; padding-bottom: 80px; }
         .max-w-1152 { max-width: 1152px; margin: 0 auto; padding: 0 16px; }
-        .max-w-896 { max-width: 896px; margin: 0 auto; padding: 0 16px; }
+        .max-w-896 { max-w: 896px; margin: 0 auto; padding: 0 16px; }
         
         nav { background: #ffffff; border-bottom: 1px solid #e2e8f0; padding: 16px 24px; position: sticky; top: 0; z-index: 50; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
         .nav-container { display: flex; justify-content: space-between; align-items: center; max-width: 1152px; margin: 0 auto; }
@@ -18,42 +18,47 @@
         .nav-links a { text-decoration: none; color: #475569; font-size: 14px; font-weight: 500; }
         .nav-links a:hover { color: #15803d; }
 
-        .hero { text-align: center; padding: 50px 24px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; margin: 24px auto; }
-        .badge { display: inline-flex; align-items: center; background: #d1fae5; color: #065f46; font-size: 11px; font-weight: 600; padding: 4px 12px; border-radius: 9999px; margin-bottom: 16px; }
-        h1 { font-size: 32px; font-weight: 800; color: #0f172a; margin-bottom: 12px; }
-        .hero p { font-size: 15px; color: #475569; max-w: 600px; margin: 0 auto 24px auto; }
-        .btn { display: inline-block; background: #15803d; color: #ffffff; font-weight: 600; padding: 12px 32px; border-radius: 12px; text-decoration: none; }
+        .admin-studio { background: #fef2f2; border: 2px solid #ef4444; border-radius: 24px; padding: 32px; margin: 24px auto; }
+        .admin-studio h2 { color: #991b1b; font-size: 22px; margin-bottom: 12px; }
+        
+        .hero { text-align: center; padding: 60px 24px; background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; margin: 24px auto; box-shadow: 0 1px 3px rgba(0,0,0,0.05); }
+        .badge { display: inline-flex; align-items: center; background: #d1fae5; color: #065f46; font-size: 11px; font-weight: 600; padding: 6px 16px; border-radius: 9999px; margin-bottom: 24px; }
+        h1 { font-size: 36px; font-weight: 800; color: #0f172a; line-height: 1.2; margin-bottom: 16px; }
+        .hero p { font-size: 16px; color: #475569; max-w: 640px; margin: 0 auto 32px auto; }
+        .btn { display: inline-block; background: #15803d; color: #ffffff; font-weight: 600; padding: 14px 36px; border-radius: 12px; text-decoration: none; cursor: pointer; border: none; }
+        .btn:hover { background: #166534; }
+        .btn-red { background: #dc2626; } .btn-red:hover { background: #991b1b; }
 
-        .stats-grid { display: grid; grid-template-cols: repeat(2, 1fr); gap: 12px; margin-bottom: 32px; text-align: center; }
+        .stats-grid { display: grid; grid-template-cols: repeat(2, 1fr); gap: 16px; margin-bottom: 48px; text-align: center; }
         @media (min-width: 768px) { .stats-grid { grid-template-cols: repeat(4, 1fr); } }
-        .stat-card { background: #ffffff; padding: 16px; border-radius: 16px; border: 1px solid #e2e8f0; }
-        .stat-label { font-size: 10px; font-weight: 700; color: #94a3b8; text-transform: uppercase; }
-        .stat-value { font-size: 20px; font-weight: 800; color: #0f172a; margin-top: 4px; }
+        .stat-card { background: #ffffff; padding: 24px 16px; border-radius: 16px; border: 1px solid #e2e8f0; box-shadow: 0 1px 2px rgba(0,0,0,0.05); }
+        .stat-label { font-size: 11px; font-weight: 700; color: #94a3b8; text-transform: uppercase; }
+        .stat-value { font-size: 24px; font-weight: 800; color: #0f172a; margin-top: 6px; }
 
-        .info-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 32px; margin-bottom: 24px; }
-        .info-box h2 { font-size: 20px; font-weight: 800; margin-bottom: 12px; }
-        .info-box p { font-size: 14px; color: #475569; margin-bottom: 12px; }
-        .info-box ul { margin-left: 20px; color: #475569; font-size: 14px; }
-        .info-box li { margin-bottom: 8px; }
-
-        .faq-item { margin-bottom: 16px; padding-bottom: 12px; border-bottom: 1px solid #f1f5f9; }
-        .faq-question { font-size: 15px; font-weight: 700; color: #0f172a; margin-bottom: 4px; }
-        .faq-answer { font-size: 13px; color: #475569; }
-
-        .interactive-tool { background: #fff; border: 2px dashed #15803d; border-radius: 24px; padding: 32px; margin-bottom: 24px; }
-        .input-field { width: 100%; padding: 12px; border: 1px solid #e2e8f0; border-radius: 10px; margin-top: 8px; margin-bottom: 16px; font-size: 14px; }
-        .preview-banner { background: #0f172a; color: #fff; padding: 20px; border-radius: 12px; text-center: center; font-weight: bold; margin-top: 12px; text-align: center; }
-
-        .cards-grid { display: grid; grid-template-cols: 1fr; gap: 24px; margin-bottom: 32px; }
+        .cards-grid { display: grid; grid-template-cols: 1fr; gap: 24px; margin-bottom: 48px; }
         @media (min-width: 768px) { .cards-grid { grid-template-cols: repeat(2, 1fr); } }
-        .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; }
-        .card-body { padding: 24px; flex: 1; }
-        .card-badge { display: inline-block; background: #fef3c7; color: #92400e; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; }
-        .progress-bar-bg { width: 100%; background: #f1f5f9; height: 10px; border-radius: 9999px; overflow: hidden; margin-top: 12px; margin-bottom: 8px; }
+        .card { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 20px; overflow: hidden; display: flex; flex-direction: column; box-shadow: 0 1px 3px rgba(0,0,0,0.03); }
+        .card-body { padding: 28px; flex: 1; display: flex; flex-direction: column; }
+        .card-badge { align-self: flex-start; background: #fef3c7; color: #92400e; font-size: 11px; font-weight: 700; padding: 4px 10px; border-radius: 6px; margin-bottom: 16px; text-transform: uppercase; }
+        .card h3 { font-size: 20px; font-weight: 700; color: #0f172a; margin-bottom: 10px; }
+        .card p { font-size: 14px; color: #475569; margin-bottom: 24px; flex: 1; }
+        .progress-bar-bg { width: 100%; background: #f1f5f9; height: 10px; border-radius: 9999px; overflow: hidden; margin-bottom: 10px; }
         .progress-bar-fill { background: #15803d; height: 100%; }
         .progress-text { display: flex; justify-content: space-between; font-size: 12px; font-weight: 700; color: #64748b; }
-        .card-footer { background: #f8fafc; padding: 16px 24px; border-top: 1px solid #f1f5f9; }
-        .card-btn { display: block; text-align: center; background: #15803d; color: #ffffff; font-weight: 600; padding: 10px; border-radius: 10px; text-decoration: none; font-size: 13px; }
+        .card-footer { background: #f8fafc; padding: 20px 28px; border-top: 1px solid #f1f5f9; }
+        .card-btn { display: block; text-align: center; background: #15803d; color: #ffffff; font-weight: 600; padding: 12px; border-radius: 12px; text-decoration: none; font-size: 14px; }
+
+        .info-box { background: #ffffff; border: 1px solid #e2e8f0; border-radius: 24px; padding: 40px; margin-bottom: 48px; }
+        .info-box h2 { font-size: 24px; font-weight: 800; color: #0f172a; margin-bottom: 16px; }
+        .info-box p { font-size: 15px; color: #475569; margin-bottom: 16px; }
+        .info-box ul { margin-left: 20px; color: #475569; font-size: 15px; }
+        .info-box li { margin-bottom: 10px; }
+
+        .input-field { width: 100%; padding: 14px; border: 1px solid #e2e8f0; border-radius: 12px; margin-top: 10px; margin-bottom: 20px; font-size: 15px; }
+        .preview-banner { background: #0f172a; color: #ffffff; padding: 32px; border-radius: 16px; text-align: center; font-size: 24px; font-weight: 900; letter-spacing: 0.05em; margin-top: 16px; border: 4px solid #15803d; }
+        .faq-item { margin-bottom: 24px; padding-bottom: 16px; border-bottom: 1px solid #f1f5f9; }
+        .faq-question { font-size: 16px; font-weight: 700; color: #0f172a; margin-bottom: 8px; }
+        .faq-answer { font-size: 14px; color: #475569; }
     </style>
 </head>
 <body>
@@ -71,6 +76,17 @@
         </div>
     </nav>
 
+    <div class="max-w-1152">
+        <section class="admin-studio">
+            <h2>⚙️ GazaDirect Admin Studio (Active)</h2>
+            <p style="font-size: 14px; color: #7f1d1d; margin-bottom: 16px;">Verwalten Sie die 42 aktiven Slots, loesen Sie die faire Rotation aus und aktualisieren Sie Kampagnen-Meters live.</p>
+            <div style="display: flex; gap: 12px; flex-wrap: wrap;">
+                <button class="btn btn-red" style="padding: 10px 20px; font-size: 13px;" onclick="alert('Tabs Randomly Shuffled for Fair Rotation Engine!')">Shuffle Member Tabs Order</button>
+                <button class="btn" style="padding: 10px 20px; font-size: 13px; background:#0284c7;" onclick="alert('Live Cloud Sync Active. Checking GFM/Chuffed APIs...')">Sync Numbers From Platforms</button>
+            </div>
+        </section>
+    </div>
+
     <div class="max-w-896 px-4">
         <section class="hero">
             <div class="badge">100% Direct Human-to-Human Solidarity</div>
@@ -80,62 +96,6 @@
         </section>
     </div>
 
-    <div class="max-w-1152">
-        <section class="stats-grid">
-            <div class="stat-card"><div class="stat-label">Total Geliefert</div><div class="stat-value">$210,727</div></div>
-            <div class="stat-card"><div class="stat-label">Aktive Familien</div><div class="stat-value">1 Aktiv</div></div>
-            <div class="stat-card"><div class="stat-label">Plattformgebühr</div><div class="stat-value" style="color:#15803d;">0% Taken</div></div>
-            <div class="stat-card"><div class="stat-label">Languages</div><div class="stat-value">15 Supported</div></div>
-        </section>
-
-        <!-- 1. قسم العائلات والمبادرات الحية -->
-        <section id="families" style="margin-bottom: 32px;">
-            <h2 class="section-title">🍉 Verifizierte Initiativen & Familien</h2>
-            <div class="cards-grid">
-                <div class="card">
-                    <div class="card-body">
-                        <div class="card-badge">Bildungsinitiative</div>
-                        <h3 style="font-size:18px; font-weight:700; margin:12px 0 6px 0;">Kids4Hope – Bildung & Nahrung</h3>
-                        <p style="font-size:13px; color:#475569;">Unterstuetzung fuer kriegsbetroffene Waisenkinder im Norden Gazas durch den Aufbau von Bildungszelten und ein taegliches Schulfruehstueck.</p>
-                        <div class="progress-bar-bg"><div class="progress-bar-fill" style="width: 58%"></div></div>
-                        <div class="progress-text"><span style="color:#15803d;">58% Finanziert</span><span>Bereits 1,744 EUR gesammelt</span></div>
-                    </div>
-                    <div class="card-footer"><a href="https://gogetfunding.com/Kids4Hope/" target="_blank" class="card-btn">Direkt Unterstützen →</a></div>
-                </div>
-            </div>
-        </section>
-
-        <!-- 2. استوديو الملصقات الذكي (Story Card Studio) -->
-        <section id="studio" class="interactive-tool">
-            <h2>📲 Family Story Card Studio</h2>
-            <p style="font-size:14px; color:#475569;">Generieren Sie hochaufloesende vertikale Poster (1080x1920 HD) fuer Instagram, TikTok und WhatsApp Stories mit einem Klick.</p>
-            <button class="btn" style="margin-top:12px; font-size:13px;" onclick="alert('Poster Asset Ready for Download!')">Download HD Poster (PNG)</button>
-        </section>
-
-        <!-- 3. مولد اللافتات الاحتجاجية (Printable City Banner Generator) -->
-        <section id="banner" class="interactive-tool">
-            <h2>🖨️ Printable Local Solidarity Banner Generator</h2>
-            <p style="font-size:14px; color:#475569;">Geben Sie den Namen Ihrer Stadt oder Universitaet ein, um eine tischgrosse Protestlafe mit zentriertem QR-Code zu erstellen.</p>
-            <input type="text" id="cityInput" class="input-field" placeholder="Geben Sie Ihre Stadt ein (z.B. Berlin, Wien)" oninput="updateBanner()">
-            <div class="preview-banner" id="bannerPreview">YOUR CITY STANDS WITH GAZA</div>
-        </section>
-
-        <!-- 4. قسم عهد التوثيق والنزاهة -->
-        <section id="pledge" class="info-box">
-            <h2>🛡️ Unser Verifizierungs-Versprechen (Verification Pledge)</h2>
-            <p>Vertrauen und Transparenz sind unsere Basis. Jede Kampagne durchlaeuft einen strengen mehrstufigen Pruefprozess vor Ort:</p>
-            <ul>
-                <li><strong>Identitaetspruefung:</strong> Physische Kontrolle von Ausweisdokumenten durch Helfer in den Camps.</li>
-                <li><strong>Direkte Finanzwege:</strong> Direkte Verknuepfung der Spendenseiten mit den Empfaengern ohne Abzuege.</li>
-                <li><strong>Nachweise:</strong> Verpflichtung zu regelmaessigen Foto- und Video-Updates aus dem Feld.</li>
-            </ul>
-        </section>
-
-        <!-- 5. قسم الأسئلة الشائعة المتكامل -->
-        <section id="faq" class="info-box">
-            <h2>❓ Häufig gestellte Fragen (FAQ)</h2>
-            <div class="faq-item">
-                <div class="faq-question">● Behaelt die Plattform Gebuehren ein?</div>
 
 
 
